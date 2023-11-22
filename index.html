@@ -55,17 +55,6 @@ h1 {
     text-align: center;
 }
 
-/* Style for the footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #8DA399;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Add some responsiveness */
 @media screen and (max-width: 600px) {
     nav ul li {
@@ -73,10 +62,33 @@ footer {
         margin: 0;
     }
 
-    main {
-        width: 90%;
-        margin: 20px auto;
-    }
+   html, body {
+    height: 100%; /* Essential to make the page container fill the full height */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    box-sizing: border-box; /* Ensures padding does not affect the total width/height */
+}
+
+.page-container {
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    min-height: 100%; /* Minimum height of the container is the full viewport */
+}
+
+main {
+    flex-grow: 1; /* Allows the main content to grow and fill available space */
+}
+
+/* Style your header, main and footer as required */
+header, main, footer {
+    padding: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #8DA399;
+    color: #fff;
+    bottom: 0;
+    width: 100%;/* Example padding, adjust as needed */
+}
 }
 </style>
 </head>
